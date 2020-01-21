@@ -6,15 +6,15 @@ page has loaded, effectively circumventing the transclusion limit.
 # Overview
 This gadget has two main files where it works from. These are:
 
-* the JavaScript (js/Gadget-spriteDoc.js);
-* the accompanying CSS (css/Gadget-spriteDoc.css).
+* the JavaScript (`js/Gadget-spriteDoc.js`);
+* the accompanying CSS (`css/Gadget-spriteDoc.css`).
 
 For the gadget to work correctly, though, a couple of supplementary files have
 been included. These are:
 
-* the Lua sprite module (lua/Sprite.lua);
-* the LoadSprite template (templates/LoadSprite.txt);
-* the LoadSprite widget (widgets/LoadSprite.txt).
+* the Lua sprite module (`lua/Sprite.lua`);
+* the LoadSprite template (`templates/LoadSprite.txt`);
+* the LoadSprite widget (`widgets/LoadSprite.txt`).
 
 # Components
 Below follows an explanation of the files necessary to make this gadget work as
