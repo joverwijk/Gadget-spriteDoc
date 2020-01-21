@@ -78,11 +78,11 @@ documentation.
 
 # Instructions
 ## Prerequisites
-This instructions manual assumes your wiki is already using the sprite editor
-as seen on the [Minecraft Wiki](https://minecraft.gamepedia.com/Template:Sprite).
+This instructions manual assumes your wiki is already using sprites as seen on
+the [Minecraft Wiki](https://minecraft.gamepedia.com/Template:Sprite).
 
 ## Importing
-1. Notify wiki users about the change you'll be making.
+1. Notify wiki users about the change you'll be making;
 2. Create `Widget:LoadSprite` on your wiki. This requires administator
 privileges. Copy and paste the contents of `widgets/LoadSprite.txt` in there;
 3. Create `Template:LoadSprite` on your wiki. Copy and paste the contents of
@@ -90,13 +90,13 @@ privileges. Copy and paste the contents of `widgets/LoadSprite.txt` in there;
 stated;
 4. Create `MediaWiki:Gadget-spriteDoc.css` on your wiki. This also requires
 administrator privileges. Copy and paste the contents of
-`css/Gadget-spriteDoc.css` into that page.
+`css/Gadget-spriteDoc.css` into that page;
 5. Create `MediaWiki:Gadget-spriteDoc.js` on you wiki. Copy and paste the
-contents of `js/Gadget-spriteDoc.js` into that page.
-6. Finally, update `Module:Sprite` with the code in `lua/Sprite.lua`.
+contents of `js/Gadget-spriteDoc.js` into that page;
+6. Finally, update `Module:Sprite` with the code in `lua/Sprite.lua`;
 7. In `MediaWiki:Gadgets-definition`, add the following line to the page at the
 appropiate section: `* spriteDoc[ResourceLoader|default|hidden|dependencies=mediawiki.api,mediawiki.notify,mediawiki.notification,mediawiki.util]|spriteDoc.js|spriteDoc.css`
-and remove the following line: `* spriteEditLoader[ResourceLoader|default|dependencies=mediawiki.notification,mediawiki.util]|spriteEditLoader.js`.
+and remove the following line: `* spriteEditLoader[ResourceLoader|default|dependencies=mediawiki.notification,mediawiki.util]|spriteEditLoader.js`;
 8. Go to any page you know that uses the sprite documentation function of the
 Lua module (typically `{{#invoke:sprite|doc|<sprite>}}`). Verify that sprite
 loading works correctly. Additionally, append `?`/`&spriteaction=edit` to the URL
