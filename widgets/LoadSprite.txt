@@ -1,0 +1,1 @@
+<loadsprite sprite="<!--{$sprite|escape:'html'}-->"></loadsprite>

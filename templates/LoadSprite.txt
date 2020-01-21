@@ -1,0 +1,15 @@
+<includeonly>{{#invoke:sprite|doc|{{{1}}}}}</includeonly><noinclude>
+{{documentation|content=
+This template's purpose is to show sprite data.
+Dit sjabloon zorgt ervoor dat de voorbeeldweergave van sprites wordt weergegeven.
+
+== Parameters ==
+;{{p|1}}
+:Sprite template to be loaded
+}}
+
+<!-- categories here -->
+[[Category:Technical templates]]
+[[Category:Sprite templates|*]]
+
+<!-- interwiki here -->

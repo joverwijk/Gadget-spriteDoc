@@ -1,0 +1,72 @@
+#spritedoc {
+	clear: both;
+}
+
+.spritedoc-section {
+	margin-top: 0.3em;
+}
+.spritedoc-section > h3 {
+	padding-top: 0;
+	margin-top: 0;
+}
+
+#spritedoc .spritedoc-boxes {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	padding: 0 0 1px 1px;
+	margin: 0.5em 0;
+}
+.spritedoc-box {
+	position: relative;
+	/* Non-flex fallback */
+	display: inline-block;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	   align-items: center;
+	padding: 0.5em;
+	background: #F9F9F9;
+	border: 1px solid #CCC;
+	margin: 0 0 -1px -1px;
+}
+
+.spritedoc-image {
+	/* Non-flex fallback */
+	display: inline-block;
+	/* Non-flex fallback */
+	vertical-align: middle;
+	margin-right: 0.5em;
+	line-height: 0;
+}
+
+#spritedoc .spritedoc-names {
+	/* Non-flex fallback */
+	display: inline-block;
+	/* Non-flex fallback */
+	vertical-align: middle;
+	width: 14em;
+	margin: 0;
+	/* Non-flex fallback */
+	list-style: none;
+}
+.spritedoc-name {
+	line-height: 1.2;
+	margin-bottom: 0.3em;
+}
+.spritedoc-name:last-child {
+	margin: 0;
+}
+.spritedoc-name > code {
+	display: inline-block;
+	border: 0;
+	border-radius: 0;
+	padding: 0;
+	word-wrap: break-word;
+	/* Necessary to make word-wrap work */
+	max-width: 14em;
+}
+.spritedoc-deprecated {
+	background-color: #FFEB9C;
+}
