@@ -1,6 +1,6 @@
 /** 
  * @title SpriteDoc
- * @version 1.1.0
+ * @version 1.1.0-HF
  * @author DarkShadowTNT
  * @license CC-BY-SA-4.0
  * 
@@ -32,7 +32,7 @@ var i18n = {
 	 */
 	spriteModule: 'sprite',
 	spriteModuleGetRawSpriteDataFunction: 'getRawSpriteData',
-	spriteSuffix: 'CSS.png',
+	spriteSuffix: 'Sprite.png',
 	
 	/**
 	 * FileUrl template.
@@ -49,16 +49,16 @@ var i18n = {
 	  * @key loadingSpriteImageFailed - Warning message to show when the sprite
 	  * 							    sheet could not be loaded.
 	  */
-	 warning: 'Waarschuwing',
-	 loadingSpriteDataFailed: 'Spritedata kon niet geladen worden.',
-	 loadingSpriteImageFailed: 'Spritesheet kon niet geladen worden.',
+	 warning: 'Warning',
+	 loadingSpriteDataFailed: 'Could not load sprite data.',
+	 loadingSpriteImageFailed: 'Could not load the spritesheet.',
 	 
 	 /**
 	  * i18n for the table of contents.
 	  * 
 	  * @key TOCText - Title of the table of contents.
 	  */
-	 TOCText: 'Inhoud',
+	 TOCText: 'Contents',
 };
 
 var spritedocElement = document.getElementById('spritedoc');
