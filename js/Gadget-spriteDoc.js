@@ -1,8 +1,8 @@
 /** 
  * @title SpriteDoc
- * @version 1.0.0
+ * @version 1.1.0
  * @author DarkShadowTNT
- * @license CC-BY-SA 4.0
+ * @license CC-BY-SA-4.0
  * 
  * @dependencies mediawiki.api, mediawiki.notify, mediawiki.notification
  *				 mediawiki.util
@@ -32,7 +32,7 @@ var i18n = {
 	 */
 	spriteModule: 'sprite',
 	spriteModuleGetRawSpriteDataFunction: 'getRawSpriteData',
-	spriteSuffix: 'Sprite.png',
+	spriteSuffix: 'CSS.png',
 	
 	/**
 	 * FileUrl template.
@@ -49,16 +49,16 @@ var i18n = {
 	  * @key loadingSpriteImageFailed - Warning message to show when the sprite
 	  * 							    sheet could not be loaded.
 	  */
-	 warning: 'Warning',
-	 loadingSpriteDataFailed: 'Could not load sprite data.',
-	 loadingSpriteImageFailed: 'Could not load the spritesheet.',
+	 warning: 'Waarschuwing',
+	 loadingSpriteDataFailed: 'Spritedata kon niet geladen worden.',
+	 loadingSpriteImageFailed: 'Spritesheet kon niet geladen worden.',
 	 
 	 /**
 	  * i18n for the table of contents.
 	  * 
 	  * @key TOCText - Title of the table of contents.
 	  */
-	 TOCText: 'Contents',
+	 TOCText: 'Inhoud',
 };
 
 var spritedocElement = document.getElementById('spritedoc');
@@ -550,6 +550,9 @@ function calculateSpritePositionOnSheet(spritePos) {
 	var sheetWidth = spriteDataSettings.sheetsize ? spriteDataSettings.sheetsize : spriteDefaults.sheetsize;
 	var tiles = sheetWidth / size;
 	var scale = spriteDataSettings.scale ? spriteDataSettings.scale : spriteDefaults.scale;
+	var autoScale = spriteDataSettings.autoscale ? spriteDataSettings.autoscale : spriteDefaults.autoscale;
+	
+	var spritePositionAndCSS;
 	
 	if (spritePos) {
 		pos = spritePos - 1;
@@ -562,5 +565,16 @@ function calculateSpritePositionOnSheet(spritePos) {
 	var left = pos % tiles * size * scale;
 	var top = Math.floor(pos / tiles) * size * scale;
 	
-	return "background-position:-" + left + "px -" + top + "px";
+	spritePositionAndCSS = "background-position:-" + left + "px -" + top + "px;";
+	
+	if (autoScale && scale !== spriteDefaults.scale) {
+		spritePositionAndCSS += "background-size:" + (sheetWidth * scale) + "px auto;";
+	}
+	
+	if (size !== spriteDefaults.size || (autoScale && scale !== spriteDefaults.scale)) {
+		spritePositionAndCSS += "height:" + (size * scale) + "px;";
+		spritePositionAndCSS += "width:" + (size * scale) + "px;";
+	}
+	
+	return spritePositionAndCSS;
 }
